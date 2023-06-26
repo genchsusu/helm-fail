@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simulate-crashbackoff
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simulate-crashbackoff
+  template:
+    metadata:
+      labels:
+        app: simulate-crashbackoff
+    spec:
+      restartPolicy: Always
+      containers:
+      - name: app
+        image: busybox
+        command: ["nonexistent-command"]
