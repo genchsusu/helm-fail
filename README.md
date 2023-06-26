@@ -13,7 +13,7 @@ Installed plugin: fail
 
 ### Fix the pending status
 
-Fix the pending status:
+Error: UPGRADE FAILED: another operation (install/upgrade/rollback) is in progress
 
 ```console
 $ helm fail [RELEASE] [flags]
