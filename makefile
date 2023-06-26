@@ -1,4 +1,4 @@
-HELM_PLUGIN_NAME := fail
+HELM_PLUGIN_NAME := $(shell cat plugin.yaml | grep "name" | cut -d '"' -f 2)
 VERSION := $(shell cat plugin.yaml | grep "version" | cut -d '"' -f 2)
 LDFLAGS := "-X main.version=${VERSION}"
 
